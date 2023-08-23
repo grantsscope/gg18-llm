@@ -9,17 +9,17 @@ from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
-from trubrics.integrations.streamlit import FeedbackCollector
+#from trubrics.integrations.streamlit import FeedbackCollector
 
 langchain.verbose = True
 
 os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 
-collector = FeedbackCollector(
-    component_name="LLM_Feedback",
-    email=st.secrets["TRUBRICS_EMAIL"],
-    password=st.secrets["TRUBRICS_PWD"],
-)
+#collector = FeedbackCollector(
+#    component_name="LLM_Feedback",
+#    email=st.secrets["TRUBRICS_EMAIL"],
+#    password=st.secrets["TRUBRICS_PWD"],
+#)
 
 # Initialize Streamlit app configuration
 st.set_page_config(page_title="Gitcoin Grants Round 18")
@@ -98,7 +98,7 @@ if prompt := st.chat_input("What would you like to know about grantees in the Cl
         response = conversational_chat(prompt)
         message_placeholder.markdown(response)
     
-    collector.st_feedback(feedback_type="thumbs", model="GG18", metadata={"Question": prompt, "Response": response},open_feedback_label = "[Optional] Provide any additional info:",)   
+    #collector.st_feedback(feedback_type="thumbs", model="GG18", metadata={"Question": prompt, "Response": response},open_feedback_label = "[Optional] Provide any additional info:",)   
 
     #st.chat_message(str(feedback))
 
