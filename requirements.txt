@@ -4,3 +4,4 @@ openai
 tiktoken
 trubrics[streamlit]
 streamlit_feedback
+faiss-gpu
