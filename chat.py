@@ -72,7 +72,24 @@ st.session_state['history'] = []
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
-    welcome_msg="Hi there! 👋 Let me know if you have any questions about the grantees in the GG18 Climate Round. I am still learning the ways around here, so always refer the project details on [Explorer](https://grants.gitcoin.co/#rounds) before you finalize your contribution. (Psst...I don't know anything about the Core Rounds other than Climate yet, but I will soon)"
+    welcome_msg="""Hi there! 👋 Let me know if you have any questions about the grantees in the GG18 Climate Round. I am still learning the ways around here, so always refer the project details on [Explorer](https://grants.gitcoin.co/#rounds) before you finalize your contribution. (Psst...I don't know anything about the Core Rounds other than Climate yet, but I will soon)
+\n\n Here are some questions you can try:
+```
+Write a Twitter thread in Spanish to encourage donors to contribute 
+for project <add a name>
+```
+```
+What are some of the projects based in Europe? 
+```
+```
+ELI5 what the project <add a name> does? 
+```
+```
+List names of a few projects working directly with farmers. 
+```
+```
+What projects are working towards improving ocean health?
+```""" 
     #st.chat_message("assistant").markdown(welcome_msg)
     st.session_state.messages.append({"role": "assistant", "content": welcome_msg})
 
