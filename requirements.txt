@@ -1,4 +1,4 @@
+faiss-cpu
 langchain
 openai
-faiss-cpu
 streamlit
