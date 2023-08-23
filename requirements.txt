@@ -2,4 +2,4 @@ streamlit
 langchain
 openai
 tiktoken
-trubrics
+trubrics[streamlit]
