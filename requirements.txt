@@ -2,3 +2,4 @@ faiss-cpu
 langchain
 openai
 streamlit
+tiktoken
