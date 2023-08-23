@@ -114,10 +114,15 @@ if prompt := st.chat_input("What would you like to know about grantees in the Cl
         message_placeholder.markdown("Searching...brb...")        
         response = conversational_chat(prompt)
         message_placeholder.markdown(response)
-    
-    collector.st_feedback(feedback_type="thumbs", model="GG18", metadata={"Question": prompt, "Response": response},open_feedback_label = "[Optional] Provide any additional info:",)   
-
-    #st.chat_message(str(feedback))
 
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+if len(st.session_state.get("messages", [])) > 2:
+    collector.st_feedback(
+        feedback_type="thumbs",
+        model="GG18",
+        metadata={"chat": st.session_state.messages},
+        open_feedback_label = "[Optional] Provide any additional info:",
+        key=f"feedback_{len(st.session_state.messages)}"
+    )
