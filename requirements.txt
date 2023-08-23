@@ -3,3 +3,4 @@ langchain
 openai
 tiktoken
 trubrics[streamlit]
+streamlit_feedback
