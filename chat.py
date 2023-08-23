@@ -25,7 +25,7 @@ os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 st.set_page_config(page_title="Gitcoin Grants Round 18")
 
 
-index = './gg18-round/storage/faiss_index'
+index = './storage/faiss_index'
 embeddings = OpenAIEmbeddings()
 
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
