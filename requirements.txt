@@ -1,7 +1,7 @@
-faiss-cpu
-streamlit
 langchain
 openai
 tiktoken
+faiss-cpu
+streamlit
 trubrics[streamlit]
 streamlit_feedback
