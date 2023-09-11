@@ -16,7 +16,7 @@ langchain.verbose = True
 os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 
 collector = FeedbackCollector(
-    project="LLM_Feedback",
+    project="default",
     email=st.secrets["TRUBRICS_EMAIL"],
     password=st.secrets["TRUBRICS_PWD"],
 )
@@ -120,6 +120,7 @@ if prompt := st.chat_input("What would you like to know about grantees in the Cl
 
 if len(st.session_state.get("messages", [])) > 2:
     collector.st_feedback(
+	component = "LLM_feedback"
         feedback_type="thumbs",
         model="GG18",
         metadata={"chat": st.session_state.messages},
