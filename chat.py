@@ -120,7 +120,7 @@ if prompt := st.chat_input("What would you like to know about grantees in the Cl
 
 if len(st.session_state.get("messages", [])) > 2:
     collector.st_feedback(
-	component = "LLM_feedback",
+	component = "LLM_Feedback",
         feedback_type="thumbs",
         model="GG18",
         metadata={"chat": st.session_state.messages},
