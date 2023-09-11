@@ -16,7 +16,7 @@ langchain.verbose = True
 os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 
 collector = FeedbackCollector(
- #   component_name="LLM_Feedback",
+    project="LLM_Feedback",
     email=st.secrets["TRUBRICS_EMAIL"],
     password=st.secrets["TRUBRICS_PWD"],
 )
