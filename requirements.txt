@@ -1,6 +1,6 @@
 faiss-cpu
 langchain
-openai
+openai==0.28.1
 streamlit
 tiktoken
 trubrics
