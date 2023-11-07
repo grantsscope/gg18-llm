@@ -24,6 +24,10 @@ collector = FeedbackCollector(
 # Initialize Streamlit app configuration
 st.set_page_config(page_title="Gitcoin Grants Round 18")
 
+st.set_page_config(page_title="GrantsScope")
+st.header('GrantsScope')
+st.subheader ('GG18 Climate Round')
+
 
 index = './storage/faiss_index'
 embeddings = OpenAIEmbeddings()
