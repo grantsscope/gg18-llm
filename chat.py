@@ -32,7 +32,7 @@ embeddings = OpenAIEmbeddings()
 
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
-vectors = FAISS.load_local(index, embeddings)
+vectors = FAISS.load_local(index, embeddings, allow_dangerous_deserialization=True)
 
 prompt_template = """We have provided context information below. 
 
