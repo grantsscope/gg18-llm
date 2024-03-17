@@ -6,7 +6,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.document_loaders.csv_loader import CSVLoader
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
 from trubrics.integrations.streamlit import FeedbackCollector
